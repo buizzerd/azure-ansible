@@ -1,0 +1,13 @@
+---
+- name: Create VM
+  azure_rm_virtualmachine:
+    resource_group: BuizerdRG
+    name: BuizerVM
+    vm_size: Standard_DS1_v2
+    admin_username: buizerd
+     
+    image:
+      offer: CentOS
+      publisher: OpenLogic
+      sku: '7.5'
+      version: latest
