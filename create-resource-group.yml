@@ -1,6 +1,6 @@
 - name: Create a resource group
   azure_rm_resourcegroup:
-    name: buizerd
+    name: BuizerdRG
     location: westeu
     tags:
         testing: testing
