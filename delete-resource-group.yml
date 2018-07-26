@@ -1,4 +1,8 @@
-- name: Delete a resource group
-  azure_rm_resourcegroup:
-    name: buizerd
-    state: absent
+- name: Create VM
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Delete a resource group
+    azure_rm_resourcegroup:
+      name: buizerd
+      state: absent
