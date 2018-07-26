@@ -1,7 +1,12 @@
-- name: Create a resource group
-  azure_rm_resourcegroup:
-    name: BuizerdRG
-    location: westeu
-    tags:
-        testing: testing
-        delete: never
+- name: Create VM
+  hosts: localhost
+  connection: local
+  tasks:
+  
+  - name: Create a resource group
+    azure_rm_resourcegroup:
+      name: BuizerdRG
+      location: westeu
+      tags:
+          testing: testing
+          delete: never
