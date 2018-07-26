@@ -1,4 +1,4 @@
-- name: Create VM
+- name: Restart VM
   hosts: localhost
   connection: local
   tasks:
