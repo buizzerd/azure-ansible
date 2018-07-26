@@ -8,14 +8,14 @@
       purge_rules: yes
       rules:
           - name: AllowHTTP
-            protocol: TCP
+            protocol: Tcp
             source_address_prefix: VirtualNetwork
             destination_port_range: 80
             access: Allow
             priority: 100
             direction: Inbound
           - name: 'AllowSSH'
-            protocol: TCP
+            protocol: Tcp
             source_address_prefix: VirtualNetwork
             destination_port_range: 22
             access: Allow
