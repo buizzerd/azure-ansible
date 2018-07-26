@@ -1,6 +1,8 @@
 - name: Create RG-vnet-subnet-NSG
   hosts: localhost
   connection: local
+  vars_files:
+    - ./vars/vars.yml
   tasks:
   - name: Create a resource group
     azure_rm_resourcegroup:
