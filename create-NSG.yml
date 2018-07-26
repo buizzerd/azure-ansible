@@ -1,0 +1,23 @@
+- name: Create NSG
+  hosts: localhost
+  connection: local
+  tasks:
+  - azure_rm_securitygroup:
+      resource_group: BuizerdRG
+      name: buizerdnsg
+      purge_rules: yes
+      rules:
+          - name: AllowHTTP
+            protocol: TCP
+            source_address_prefix: VirtualNetwork
+            destination_port_range: 80
+            access: Allow
+            priority: 100
+            direction: Inbound
+          - name: 'AllowSSH'
+            protocol: TCP
+            source_address_prefix: VirtualNetwork
+            destination_port_range: 22
+            access: Allow
+            priority: 101
+            direction: Inbound
