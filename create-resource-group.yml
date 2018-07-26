@@ -1,4 +1,4 @@
-- name: Create VM
+- name: Create RG
   hosts: localhost
   connection: local
   tasks:
