@@ -5,5 +5,5 @@
   - name: Power Off
     azure_rm_virtualmachine:
       resource_group: BuizerdRG
-      name: buizerdvm
+      name: buizerdvm01
       started: no
