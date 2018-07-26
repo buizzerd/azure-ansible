@@ -2,7 +2,6 @@
   hosts: localhost
   connection: local
   tasks:
-  
   - name: Create a resource group
     azure_rm_resourcegroup:
       name: BuizerdRG
