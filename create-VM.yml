@@ -10,7 +10,7 @@
       vm_size: Standard_DS1_v2
       managed_disk_type: Premium_LRS
       admin_username: buizerd
-      admin_password: chocola1234
+      admin_password: Chocola1234
       virtual_network_name: buizerdvnet
       subnet_name: buizerdsubnet01
       network_interface_names: buizerdnic001
