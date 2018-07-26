@@ -1,0 +1,9 @@
+- name: Create VM
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Restart
+    azure_rm_virtualmachine:
+      resource_group: BuizerdRG
+      name: buizerdvm
+      restarted: yes
