@@ -1,0 +1,17 @@
+---
+- name: Create VM
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Create VM
+    azure_rm_virtualmachine:
+      resource_group: WeEu-Pla-Prd-Rsg-01
+      name: weeuplatctho01
+      vm_size: Standard_DS1_v2
+      admin_username: ThorkellHeida
+     
+      image:
+        offer: CentOS
+        publisher: OpenLogic
+        sku: '7.5'
+        version: latest
