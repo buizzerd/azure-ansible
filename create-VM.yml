@@ -13,7 +13,7 @@
       admin_password: chocola1234
       virtual_network_name: buizerdvnet
       subnet_name: buizerdsubnet01
-      network_interfaces: buizerdnic001
+      network_interface_names: buizerdnic001
       image:
         offer: RHEL
         publisher: RedHat
