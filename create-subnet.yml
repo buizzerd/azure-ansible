@@ -1,0 +1,10 @@
+- name: Create subnet
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Create a subnet
+    azure_rm_subnet:
+      name: buizerdsubnet01
+      virtual_network_name: BuizerdVnet
+      resource_group: BuizerdRG
+      address_prefix_cidr: "10.1.0.0/24"
