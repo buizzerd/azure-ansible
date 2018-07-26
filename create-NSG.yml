@@ -4,19 +4,19 @@
   tasks:
   - azure_rm_securitygroup:
       resource_group: BuizerdRG
-      name: buizerdnsg
+      name: buizerdnsg01
       purge_rules: yes
       rules:
           - name: AllowHTTP
             protocol: Tcp
-            source_address_prefix: VirtualNetwork
+            source_address_prefix: *
             destination_port_range: 80
             access: Allow
             priority: 100
             direction: Inbound
           - name: 'AllowSSH'
             protocol: Tcp
-            source_address_prefix: VirtualNetwork
+            source_address_prefix: *
             destination_port_range: 22
             access: Allow
             priority: 101
