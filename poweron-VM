@@ -1,0 +1,8 @@
+- name: Poweron VM
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Power On
+    azure_rm_virtualmachine:
+      resource_group: BuizerdRG
+      name: buizerdvm
