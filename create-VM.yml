@@ -6,22 +6,20 @@
   - name: Create VM
     azure_rm_virtualmachine:
       resource_group: BuizerdRG
-      name: buizerdvm
+      name: buizerdvm01
       vm_size: Standard_DS1_v2
-      managed_disk_type: Standard_LRS
+      managed_disk_type: Premium_LRS
       admin_username: buizerd
       admin_password: chocola1234
+      virtual_network_name: buizerdvnet
+      subnet_name: buizerdsubnet01
       network_interfaces: buizerdnic001
       image:
         offer: CentOS
         publisher: OpenLogic
         sku: '7.5'
-        version: latest
-     
+        version: latest     
       data_disks:
          - lun: 0
            disk_size_gb: 64
            managed_disk_type: Standard_LRS
-         - lun: 1
-           disk_size_gb: 128
-           managed_disk_type: Premium_LRS
