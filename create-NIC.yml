@@ -1,0 +1,15 @@
+- name: Create NIC
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Create a network interface using existing security group and public IP
+    azure_rm_networkinterface:
+      name: buizerdnic001
+      resource_group: BuizerdRG
+      virtual_network_name: buizerdvnet
+      subnet_name: buizerdsubnet01
+      security_group_name: buizerdnsg01
+      ip_configurations:
+        - name: buizerdipconfig01
+          public_ip_address_name: buizerdpip01
+          primary: True
