@@ -8,4 +8,6 @@
     azure_rm_resourcegroup:
       name: "{{ az_resource_group_name }}"
       location: "{{ az_resource_group_location }}"
-      tags: "{{ az_tags }}"
+    tags:
+      Owner: "{{az_owner_tag }}"
+      Application: "{{ application_name }}"
