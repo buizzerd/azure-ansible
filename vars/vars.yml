@@ -1,9 +1,8 @@
 application_name: "buizzerd"
 az_resource_group_name: "{{ application_name }}RG"
 az_resource_group_location: "westeurope"
-az_tags:
-  - { CreatedBy: "Buizerd" }
-  - { Application: "{{ application_name }}" }
+azure_tags:
+  - { CreatedBy: "Buizerd", Application: "{{ application_name }}" }
 az_vnet_name: "{{ application_name }}vnet"
 az_vnet_cidr: "10.23.0.0/16"
 az_subnet_name: "{{ application_name }}subnet01"
