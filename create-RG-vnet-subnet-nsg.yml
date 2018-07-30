@@ -8,4 +8,4 @@
     azure_rm_resourcegroup:
       name: "{{ az_resource_group_name }}"
       location: "{{ az_resource_group_location }}"
-      tags: "{{ azure_tags }}"
+      tags: "{{ az_tags }}"

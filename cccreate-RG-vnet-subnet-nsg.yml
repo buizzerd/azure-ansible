@@ -3,7 +3,7 @@
         name: "{{ az_vnet_name }}"
         resource_group: "{{ az_resource_group_name }}"
         address_prefixes_cidr: "{{ az_vnet_cidr }}"
-        tags: "{{ azure_tags }}"
+        tags: "{{ az_tags }}"
   - name: Create a subnet
       azure_rm_subnet:
         name: "{{ az_subnet_name }}"
