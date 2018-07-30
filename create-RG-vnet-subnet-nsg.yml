@@ -25,7 +25,7 @@
   - name: Create an NSG
       azure_rm_securitygroup:
         resource_group: "{{ az_resource_group_name }}"
-        name: {{ az_nsg_name }}"
+        name: "{{ az_nsg_name }}"
         purge_rules: yes
         rules:
           - name: AllowHTTP
