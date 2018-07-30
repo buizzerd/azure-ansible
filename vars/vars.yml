@@ -1,4 +1,4 @@
-application_name: "buizzerd"
+application_name: "buizerd"
 az_resource_group_name: "{{ application_name }}RG"
 az_resource_group_location: "westeurope"
 az_owner_tag: "Buizerd"
