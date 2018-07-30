@@ -9,5 +9,5 @@
       name: "{{ az_resource_group_name }}"
       location: "{{ az_resource_group_location }}"
     tags:
-      Application Owner: "{{vaz_owner_tag }}"
+      Application Owner: "{{ az_owner_tag }}"
       Application Name: "{{ application_name }}"
