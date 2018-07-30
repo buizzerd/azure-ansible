@@ -9,4 +9,4 @@
       name: "{{ az_resource_group_name }}"
       location: "{{ az_resource_group_location }}"
     tags:
-      - { Owner: "{{az_owner_tag }}", Application: "{{ application_name }}" }
+      - Owner: "{{az_owner_tag }}"
