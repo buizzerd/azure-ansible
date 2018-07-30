@@ -10,4 +10,3 @@
       location: "{{ az_resource_group_location }}"
     tags:
       - Application Owner: "{{ az_owner_tag }}"
-      - Application Name: "{{ application_name }}"
