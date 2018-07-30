@@ -9,3 +9,34 @@
       name: "{{ az_resource_group_name }}"
       location: "{{ az_resource_group_location }}"
       tags: "{{ az_tags }}"
+  - name: Create a virtual network
+      azure_rm_virtualnetwork:
+        name: "{{ az_vnet_name }}"
+        resource_group: "{{ az_resource_group_name }}"
+        address_prefixes_cidr:
+           - "{{ az_vnet_cidr }}"
+        tags: "{{ az_tags }}"
+  - name: Create a subnet
+      azure_rm_subnet:
+        name: "{{ az_subnet_name }}"
+        virtual_network_name: "{{ az_vnet_name }}"
+        resource_group: "{{ az_resource_group_name }}"
+        address_prefix_cidr: "{{ az_subnet_cidr }}"
+  - name: Create an NSG
+      azure_rm_securitygroup:
+        resource_group: "{{ az_resource_group_name }}"
+        name: "{{ az_nsg_name }}"
+        purge_rules: yes
+        rules:
+          - name: AllowHTTP
+            protocol: Tcp
+            destination_port_range: 80
+            access: Allow
+            priority: 100
+            direction: Inbound
+          - name: 'AllowRDP'
+            protocol: Tcp
+            destination_port_range: 3389
+            access: Allow
+            priority: 101
+            direction: Inbound
