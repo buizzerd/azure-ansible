@@ -66,9 +66,9 @@
       subnet_name: "{{ az_subnet_name }}"
       network_interface_names: "{{ application_name }}nic001"
       image:
-        offer: RHEL
-        publisher: RedHat
-        sku: '7.3'
+        offer: WindowsServer
+        publisher: MicrosoftWindowsServer
+        sku: 2016-Datacenter
         version: latest     
       data_disks:
          - lun: 0
