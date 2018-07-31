@@ -1,0 +1,25 @@
+---
+- name: Create VM
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Create VM
+    azure_rm_virtualmachine:
+      resource_group: BuizerdRG
+      name: buizerdvm01
+      vm_size: Standard_DS1_v2
+      managed_disk_type: Premium_LRS
+      admin_username: buizerd
+      admin_password: Chocola1234
+      virtual_network_name: buizerdvnet
+      subnet_name: buizerdsubnet01
+      network_interface_names: buizerdnic001
+      image:
+        offer: WindowsServer
+        publisher: MicrosoftWindowsServer
+        sku: 2016-Datacenter
+        version: latest     
+      data_disks:
+         - lun: 0
+           disk_size_gb: 64
+           managed_disk_type: Standard_LRS
