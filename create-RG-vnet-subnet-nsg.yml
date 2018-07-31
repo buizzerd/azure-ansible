@@ -65,6 +65,7 @@
       virtual_network_name: "{{ az_vnet_name }}"
       subnet_name: "{{ az_subnet_name }}"
       network_interface_names: "{{ application_name }}nic001"
+      os_type: Windows
       image:
         offer: WindowsServer
         publisher: MicrosoftWindowsServer
